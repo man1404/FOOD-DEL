@@ -1,0 +1,181 @@
+.loginContainer{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b93737;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+}
+
+/* 6 9s */
+
+.loginWrapper{
+    border-radius: 20px;
+    width: 45vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
+/* left */
+.loginLeftSide{
+    flex: 1;
+    width: 50%;
+    height: 110%;
+}
+
+.leftImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* right */
+
+.loginRightSide{
+    margin: 0;
+    flex: 1;
+    background-color: #fff;
+    height: 110%;
+    width: 110%;
+    overflow: hidden;
+}
+
+.loginRightSide > h2{
+    text-align: center;
+    font-size: 36px;
+    color: #f22a2a;
+    margin: 2.5rem 0;
+}
+
+.loginRightSide > .loginForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.loginForm{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+}
+
+.loginForm > input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #333;
+    width: 50%;
+    padding-left: 0.25rem;
+    padding-bottom: 0.25rem;
+    transition: 150ms all ease-in-out;
+}
+
+.loginForm >input:focus{
+    padding-left: 0.75rem;
+}
+
+.loginForm>.submitBtn{
+    margin-top: 2.5rem;
+    outline: none;
+    border: 1px solid transparent;
+    padding: 0.5rem 1.5rem;
+    background-color: #f22a2a;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.loginForm > .submitBtn:hover{
+    border-color: #f22a2a;
+    color: #f22a2a;
+    background-color: #fff;
+}
+
+.loginForm>p{
+    text-align: center;
+    color: rgb(159, 151, 151);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loginForm > p > a{
+    text-decoration: none;
+    font-size: 17px;
+    color: #0b0b0b;
+    margin-top: 0.25rem;
+}
+
+.errorMessage{
+    height: 70px;
+    width: 250px;
+    text-align: center;
+    border-radius: 20px;
+    line-height: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    font-weight: 500;
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .loginWrapper {
+        flex-direction: row; /* Stack content vertically */
+        width: 80vh; /* Adjust wrapper width */
+        height: 100%; /* Allow height to adjust based on content */
+    }
+
+    .loginLeftSide {
+        width: 50%; /* Full width for the left side */
+        height: 50vh; /* Adjust height as needed */
+    }
+
+    .leftImg {
+        height: 110%;
+        margin-bottom: 20rem;
+        width:100%;
+    }
+
+    .loginRightSide {
+        width: 70%; /* Full width for the right side */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .loginForm {
+        margin-top: 2rem; /* Adjust margin for smaller screens */
+        width: 80%; /* Adjust form width */
+    }
+
+    .loginForm > input {
+        width: 100%; /* Full width for inputs */
+    }
+
+    .loginForm > .submitBtn {
+        margin-top: 1.5rem; /* Adjust margin for smaller screens */
+        width: 100%; /* Full width for the submit button */
+    }
+
+    .errorMessage {
+        height: auto; /* Allow height to adjust based on content */
+        width: auto; /* Allow width to adjust based on content */
+        position: relative; /* Reset position to be relative */
+        top: initial; /* Reset top position */
+        right: initial; /* Reset right position */
+        margin: 1.5rem auto; /* Center horizontally */
+    }
+}
